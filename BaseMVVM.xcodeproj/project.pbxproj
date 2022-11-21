@@ -16,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ABAA5777292026E50008F771 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = SOURCE_ROOT; };
 		ABE411E1291F4E4300DA7439 /* BaseMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABE411E4291F4E4300DA7439 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABE411E6291F4E4300DA7439 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +38,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ABAA5769291F60D80008F771 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				ABAA576A291F60F10008F771 /* Login */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		ABAA576A291F60F10008F771 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		ABAA576B291F61180008F771 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		ABAA576C291F61930008F771 /* Mics */ = {
+			isa = PBXGroup;
+			children = (
+				ABAA576E291F61CB0008F771 /* Extensions */,
+				ABAA576D291F61C30008F771 /* Resource */,
+			);
+			path = Mics;
+			sourceTree = "<group>";
+		};
+		ABAA576D291F61C30008F771 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		ABAA576E291F61CB0008F771 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		ABE411D8291F4E4200DA7439 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +102,10 @@
 		ABE411E3291F4E4300DA7439 /* BaseMVVM */ = {
 			isa = PBXGroup;
 			children = (
+				ABAA5777292026E50008F771 /* .swiftlint.yml */,
+				ABAA576B291F61180008F771 /* Configurations */,
+				ABAA5769291F60D80008F771 /* Screens */,
+				ABAA576C291F61930008F771 /* Mics */,
 				ABE411E4291F4E4300DA7439 /* AppDelegate.swift */,
 				ABE411E6291F4E4300DA7439 /* SceneDelegate.swift */,
 				ABE411E8291F4E4300DA7439 /* ViewController.swift */,
@@ -81,8 +131,11 @@
 			buildRules = (
 			);
 			dependencies = (
+				ABAA5775292023CA0008F771 /* PBXTargetDependency */,
 			);
 			name = BaseMVVM;
+			packageProductDependencies = (
+			);
 			productName = BaseMVVM;
 			productReference = ABE411E1291F4E4300DA7439 /* BaseMVVM.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +164,9 @@
 				Base,
 			);
 			mainGroup = ABE411D8291F4E4200DA7439;
+			packageReferences = (
+				ABAA5773292023A40008F771 /* XCRemoteSwiftPackageReference "SwiftLint" */,
+			);
 			productRefGroup = ABE411E2291F4E4300DA7439 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -145,6 +201,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ABAA5775292023CA0008F771 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = ABAA5774292023CA0008F771 /* SwiftLintPlugin */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		ABE411EA291F4E4300DA7439 /* Main.storyboard */ = {
@@ -356,6 +419,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ABAA5773292023A40008F771 /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/SwiftLint";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ABAA5774292023CA0008F771 /* SwiftLintPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ABAA5773292023A40008F771 /* XCRemoteSwiftPackageReference "SwiftLint" */;
+			productName = "plugin:SwiftLintPlugin";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = ABE411D9291F4E4200DA7439 /* Project object */;
 }
