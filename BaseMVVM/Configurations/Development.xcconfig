@@ -1,0 +1,18 @@
+//
+//  Development.xcconfig
+//  BaseMVVM
+//
+//  Created by Tuan Nguyen on 21/11/2022.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+// App build info
+APP_ENVIRONMENT = Development
+APP_DISPLAY_NAME = Dev App
+APP_BUILD_VERSION = 0.0.1
+APP_BUILD_NUMBER = 1
+
+// API domain
+BASE_URL = https:\/\/dev.baseURL.com
