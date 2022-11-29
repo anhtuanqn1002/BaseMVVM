@@ -1,0 +1,36 @@
+##############################################################################
+## For more info, use `swiftgen config doc` to open the full documentation on GitHub.
+## https://github.com/SwiftGen/SwiftGen/tree/6.5.1/Documentation/
+
+input_dir: "BaseMVVM/Mics/Resource"
+output_dir: "BaseMVVM/Mics/Resource/Generated/"
+
+## XCAssets
+xcassets:
+  inputs:
+    - Images.xcassets
+    - Colors.xcassets
+  outputs:
+    templateName: swift5
+    params:
+#       forceProvidesNamespaces: true
+       forceFileNameEnum: true
+    output: XCAssets+Generated.swift
+    
+## Strings
+strings:
+  inputs:
+    - en.lproj
+  outputs:
+    - templateName: structured-swift5
+      params:
+        enumName: Localized
+      output: Strings+Generated.swift
+
+## Fonts
+#fonts:
+#  inputs:
+#    - Fonts
+#  outputs:
+#    templateName: swift5
+#    output: Fonts+Generated.swift

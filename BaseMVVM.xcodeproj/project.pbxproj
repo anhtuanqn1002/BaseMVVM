@@ -10,6 +10,13 @@
 		AB060FA8292B73B30077536E /* AppEnvironments.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB060FA7292B73B30077536E /* AppEnvironments.swift */; };
 		AB060FAA292B73FD0077536E /* ConfigurationKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB060FA9292B73FD0077536E /* ConfigurationKeys.swift */; };
 		AB461EF826C5CAEA5DD9BEF7 /* Pods_BaseMVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9691C9869ACA8D586D42E051 /* Pods_BaseMVVM.framework */; };
+		ABB4A5E62936151600ABD0F2 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = ABB4A5E52936151600ABD0F2 /* swiftgen.yml */; };
+		ABB4A5E9293615C400ABD0F2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABB4A5E8293615C400ABD0F2 /* Images.xcassets */; };
+		ABB4A5EB293615CE00ABD0F2 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABB4A5EA293615CE00ABD0F2 /* Colors.xcassets */; };
+		ABB4A5EE293616BC00ABD0F2 /* XCAssets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB4A5ED293616BC00ABD0F2 /* XCAssets+Generated.swift */; };
+		ABB4A5F0293616D200ABD0F2 /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB4A5EF293616D200ABD0F2 /* Strings+Generated.swift */; };
+		ABB4A5F2293616DD00ABD0F2 /* Fonts+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB4A5F1293616DD00ABD0F2 /* Fonts+Generated.swift */; };
+		ABB4A5F52936181500ABD0F2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ABB4A5F72936181500ABD0F2 /* Localizable.strings */; };
 		ABE411E5291F4E4300DA7439 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE411E4291F4E4300DA7439 /* AppDelegate.swift */; };
 		ABE411E7291F4E4300DA7439 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE411E6291F4E4300DA7439 /* SceneDelegate.swift */; };
 		ABE411E9291F4E4300DA7439 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE411E8291F4E4300DA7439 /* ViewController.swift */; };
@@ -30,6 +37,14 @@
 		AB060FA7292B73B30077536E /* AppEnvironments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironments.swift; sourceTree = "<group>"; };
 		AB060FA9292B73FD0077536E /* ConfigurationKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationKeys.swift; sourceTree = "<group>"; };
 		ABAA5777292026E50008F771 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = SOURCE_ROOT; };
+		ABB4A5E52936151600ABD0F2 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
+		ABB4A5E8293615C400ABD0F2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		ABB4A5EA293615CE00ABD0F2 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		ABB4A5ED293616BC00ABD0F2 /* XCAssets+Generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCAssets+Generated.swift"; sourceTree = "<group>"; };
+		ABB4A5EF293616D200ABD0F2 /* Strings+Generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
+		ABB4A5F1293616DD00ABD0F2 /* Fonts+Generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Fonts+Generated.swift"; sourceTree = "<group>"; };
+		ABB4A5F62936181500ABD0F2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		ABB4A5F82936183200ABD0F2 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		ABE411E1291F4E4300DA7439 /* BaseMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABE411E4291F4E4300DA7439 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABE411E6291F4E4300DA7439 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,7 +121,12 @@
 		ABAA576D291F61C30008F771 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				ABB4A5EC2936165500ABD0F2 /* Generated */,
+				ABE411ED291F4E4700DA7439 /* Assets.xcassets */,
+				ABB4A5E8293615C400ABD0F2 /* Images.xcassets */,
+				ABB4A5EA293615CE00ABD0F2 /* Colors.xcassets */,
 				ABE411F2291F4E4700DA7439 /* Info.plist */,
+				ABB4A5F72936181500ABD0F2 /* Localizable.strings */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -118,9 +138,20 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		ABB4A5EC2936165500ABD0F2 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				ABB4A5ED293616BC00ABD0F2 /* XCAssets+Generated.swift */,
+				ABB4A5EF293616D200ABD0F2 /* Strings+Generated.swift */,
+				ABB4A5F1293616DD00ABD0F2 /* Fonts+Generated.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
 		ABE411D8291F4E4200DA7439 = {
 			isa = PBXGroup;
 			children = (
+				ABB4A5E52936151600ABD0F2 /* swiftgen.yml */,
 				ABE411E3291F4E4300DA7439 /* BaseMVVM */,
 				ABE411E2291F4E4300DA7439 /* Products */,
 				6AD3573C4E60323C8B16A150 /* Pods */,
@@ -147,7 +178,6 @@
 				ABE411E6291F4E4300DA7439 /* SceneDelegate.swift */,
 				ABE411E8291F4E4300DA7439 /* ViewController.swift */,
 				ABE411EA291F4E4300DA7439 /* Main.storyboard */,
-				ABE411ED291F4E4700DA7439 /* Assets.xcassets */,
 				ABE411EF291F4E4700DA7439 /* LaunchScreen.storyboard */,
 			);
 			path = BaseMVVM;
@@ -169,6 +199,7 @@
 			buildConfigurationList = ABE411F5291F4E4700DA7439 /* Build configuration list for PBXNativeTarget "BaseMVVM" */;
 			buildPhases = (
 				BCD77587501DC0F35C466246 /* [CP] Check Pods Manifest.lock */,
+				ABB4A5E4293614A600ABD0F2 /* SwiftGen */,
 				ABE411DD291F4E4200DA7439 /* Sources */,
 				ABE411DE291F4E4200DA7439 /* Frameworks */,
 				ABE411DF291F4E4200DA7439 /* Resources */,
@@ -205,6 +236,7 @@
 			knownRegions = (
 				en,
 				Base,
+				vi,
 			);
 			mainGroup = ABE411D8291F4E4200DA7439;
 			packageReferences = (
@@ -225,14 +257,36 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABE411F1291F4E4700DA7439 /* LaunchScreen.storyboard in Resources */,
+				ABB4A5E9293615C400ABD0F2 /* Images.xcassets in Resources */,
 				ABE411EE291F4E4700DA7439 /* Assets.xcassets in Resources */,
+				ABB4A5F52936181500ABD0F2 /* Localizable.strings in Resources */,
+				ABB4A5EB293615CE00ABD0F2 /* Colors.xcassets in Resources */,
 				ABE411EC291F4E4300DA7439 /* Main.storyboard in Resources */,
+				ABB4A5E62936151600ABD0F2 /* swiftgen.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		ABB4A5E4293614A600ABD0F2 /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ -f \"${PODS_ROOT}/SwiftGen/bin/swiftgen\" ]]; then\n  \"${PODS_ROOT}/SwiftGen/bin/swiftgen\"\nelse\n  echo \"warning: SwiftGen is not installed. Run 'pod install --repo-update' to install it.\"\nfi \n";
+		};
 		BCD77587501DC0F35C466246 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -265,6 +319,9 @@
 				AB060FAA292B73FD0077536E /* ConfigurationKeys.swift in Sources */,
 				ABE411E9291F4E4300DA7439 /* ViewController.swift in Sources */,
 				AB060FA8292B73B30077536E /* AppEnvironments.swift in Sources */,
+				ABB4A5EE293616BC00ABD0F2 /* XCAssets+Generated.swift in Sources */,
+				ABB4A5F2293616DD00ABD0F2 /* Fonts+Generated.swift in Sources */,
+				ABB4A5F0293616D200ABD0F2 /* Strings+Generated.swift in Sources */,
 				ABE411E5291F4E4300DA7439 /* AppDelegate.swift in Sources */,
 				ABE411E7291F4E4300DA7439 /* SceneDelegate.swift in Sources */,
 			);
@@ -280,6 +337,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		ABB4A5F72936181500ABD0F2 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ABB4A5F62936181500ABD0F2 /* en */,
+				ABB4A5F82936183200ABD0F2 /* vi */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		ABE411EA291F4E4300DA7439 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -304,6 +370,7 @@
 			baseConfigurationReference = AB060FA5292B6E590077536E /* Staging.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -395,6 +462,7 @@
 			baseConfigurationReference = AB060FA5292B6E590077536E /* Staging.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -480,6 +548,7 @@
 			baseConfigurationReference = AB060FA6292B6E660077536E /* Production.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -564,6 +633,7 @@
 			baseConfigurationReference = AB060FA6292B6E660077536E /* Production.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -655,6 +725,7 @@
 			baseConfigurationReference = AB060FA4292B6E4A0077536E /* Development.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -716,6 +787,7 @@
 			baseConfigurationReference = AB060FA4292B6E4A0077536E /* Development.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";

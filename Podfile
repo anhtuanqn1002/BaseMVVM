@@ -5,6 +5,7 @@ target 'BaseMVVM' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for BaseMVVM
-
+  # The Swift code generator for your assets, storyboards, Localizable.strings, … — Get rid of all String-based APIs!
+  pod 'SwiftGen', '~> 6.0'
+  
 end
