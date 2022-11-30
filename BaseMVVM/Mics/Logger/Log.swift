@@ -7,9 +7,9 @@
 import Foundation
 import XCGLogger
 
-let log = XCGLogger.default
-
-func setupLogger() {
+let log: XCGLogger? = {
+    guard !AppEnvironment.current.isProduction else { return nil }
+    let log = XCGLogger.default
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = "HH:mm:ss.SSSSZ"
     dateFormatter.locale = Locale.current
@@ -21,4 +21,5 @@ func setupLogger() {
     log.levelDescriptions[.error]   = "🐞Error"
     log.levelDescriptions[.severe]  = "🌈Severe"
     log.setup(level: .verbose, showThreadName: true, showLevel: true, showFileNames: true, showLineNumbers: true, writeToFile: nil)
-}
+    return log
+}()

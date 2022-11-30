@@ -15,4 +15,6 @@ enum AppEnvironment: String {
     static var current: AppEnvironment {
         AppEnvironment(rawValue: ConfigurationKey.appEnvironmentName.value ?? "") ?? .unknown
     }
+    
+    var isProduction: Bool { self == .production }
 }
