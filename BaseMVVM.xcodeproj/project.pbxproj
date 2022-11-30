@@ -10,6 +10,7 @@
 		AB060FA8292B73B30077536E /* AppEnvironments.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB060FA7292B73B30077536E /* AppEnvironments.swift */; };
 		AB060FAA292B73FD0077536E /* ConfigurationKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB060FA9292B73FD0077536E /* ConfigurationKeys.swift */; };
 		AB461EF826C5CAEA5DD9BEF7 /* Pods_BaseMVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9691C9869ACA8D586D42E051 /* Pods_BaseMVVM.framework */; };
+		AB73BDAB293750E700836784 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB73BDAA293750E700836784 /* Log.swift */; };
 		ABB4A5E62936151600ABD0F2 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = ABB4A5E52936151600ABD0F2 /* swiftgen.yml */; };
 		ABB4A5E9293615C400ABD0F2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABB4A5E8293615C400ABD0F2 /* Images.xcassets */; };
 		ABB4A5EB293615CE00ABD0F2 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABB4A5EA293615CE00ABD0F2 /* Colors.xcassets */; };
@@ -23,6 +24,7 @@
 		ABE411EC291F4E4300DA7439 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABE411EA291F4E4300DA7439 /* Main.storyboard */; };
 		ABE411EE291F4E4700DA7439 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABE411ED291F4E4700DA7439 /* Assets.xcassets */; };
 		ABE411F1291F4E4700DA7439 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABE411EF291F4E4700DA7439 /* LaunchScreen.storyboard */; };
+		ABE6DC7A2937483700127149 /* XCGLogger in Frameworks */ = {isa = PBXBuildFile; productRef = ABE6DC792937483700127149 /* XCGLogger */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,7 @@
 		AB060FA6292B6E660077536E /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 		AB060FA7292B73B30077536E /* AppEnvironments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironments.swift; sourceTree = "<group>"; };
 		AB060FA9292B73FD0077536E /* ConfigurationKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationKeys.swift; sourceTree = "<group>"; };
+		AB73BDAA293750E700836784 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		ABAA5777292026E50008F771 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = SOURCE_ROOT; };
 		ABB4A5E52936151600ABD0F2 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 		ABB4A5E8293615C400ABD0F2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -63,6 +66,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB461EF826C5CAEA5DD9BEF7 /* Pods_BaseMVVM.framework in Frameworks */,
+				ABE6DC7A2937483700127149 /* XCGLogger in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +84,14 @@
 				E3CD36EF207AE0AB1A51118A /* Pods-BaseMVVM.release production.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		AB73BDA92937502000836784 /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				AB73BDAA293750E700836784 /* Log.swift */,
+			);
+			path = Logger;
 			sourceTree = "<group>";
 		};
 		ABAA5769291F60D80008F771 /* Screens */ = {
@@ -112,6 +124,7 @@
 		ABAA576C291F61930008F771 /* Mics */ = {
 			isa = PBXGroup;
 			children = (
+				AB73BDA92937502000836784 /* Logger */,
 				ABAA576E291F61CB0008F771 /* Extensions */,
 				ABAA576D291F61C30008F771 /* Resource */,
 			);
@@ -171,11 +184,11 @@
 			isa = PBXGroup;
 			children = (
 				ABAA5777292026E50008F771 /* .swiftlint.yml */,
+				ABE411E4291F4E4300DA7439 /* AppDelegate.swift */,
+				ABE411E6291F4E4300DA7439 /* SceneDelegate.swift */,
 				ABAA576B291F61180008F771 /* Configurations */,
 				ABAA5769291F60D80008F771 /* Screens */,
 				ABAA576C291F61930008F771 /* Mics */,
-				ABE411E4291F4E4300DA7439 /* AppDelegate.swift */,
-				ABE411E6291F4E4300DA7439 /* SceneDelegate.swift */,
 				ABE411E8291F4E4300DA7439 /* ViewController.swift */,
 				ABE411EA291F4E4300DA7439 /* Main.storyboard */,
 				ABE411EF291F4E4700DA7439 /* LaunchScreen.storyboard */,
@@ -210,6 +223,9 @@
 				ABAA5775292023CA0008F771 /* PBXTargetDependency */,
 			);
 			name = BaseMVVM;
+			packageProductDependencies = (
+				ABE6DC792937483700127149 /* XCGLogger */,
+			);
 			productName = BaseMVVM;
 			productReference = ABE411E1291F4E4300DA7439 /* BaseMVVM.app */;
 			productType = "com.apple.product-type.application";
@@ -241,6 +257,7 @@
 			mainGroup = ABE411D8291F4E4200DA7439;
 			packageReferences = (
 				ABAA5773292023A40008F771 /* XCRemoteSwiftPackageReference "SwiftLint" */,
+				ABE6DC782937483700127149 /* XCRemoteSwiftPackageReference "XCGLogger" */,
 			);
 			productRefGroup = ABE411E2291F4E4300DA7439 /* Products */;
 			projectDirPath = "";
@@ -271,6 +288,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		ABB4A5E4293614A600ABD0F2 /* SwiftGen */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -318,6 +336,7 @@
 			files = (
 				AB060FAA292B73FD0077536E /* ConfigurationKeys.swift in Sources */,
 				ABE411E9291F4E4300DA7439 /* ViewController.swift in Sources */,
+				AB73BDAB293750E700836784 /* Log.swift in Sources */,
 				AB060FA8292B73B30077536E /* AppEnvironments.swift in Sources */,
 				ABB4A5EE293616BC00ABD0F2 /* XCAssets+Generated.swift in Sources */,
 				ABB4A5F2293616DD00ABD0F2 /* Fonts+Generated.swift in Sources */,
@@ -820,6 +839,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -831,6 +851,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -939,6 +960,14 @@
 				kind = branch;
 			};
 		};
+		ABE6DC782937483700127149 /* XCRemoteSwiftPackageReference "XCGLogger" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/DaveWoodCom/XCGLogger";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -946,6 +975,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = ABAA5773292023A40008F771 /* XCRemoteSwiftPackageReference "SwiftLint" */;
 			productName = "plugin:SwiftLintPlugin";
+		};
+		ABE6DC792937483700127149 /* XCGLogger */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ABE6DC782937483700127149 /* XCRemoteSwiftPackageReference "XCGLogger" */;
+			productName = XCGLogger;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
