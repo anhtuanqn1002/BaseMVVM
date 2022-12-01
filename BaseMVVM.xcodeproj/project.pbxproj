@@ -105,6 +105,7 @@
 		ABAA576A291F60F10008F771 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				ABE411E8291F4E4300DA7439 /* ViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -165,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				ABB4A5E52936151600ABD0F2 /* swiftgen.yml */,
+				ABAA5777292026E50008F771 /* .swiftlint.yml */,
 				ABE411E3291F4E4300DA7439 /* BaseMVVM */,
 				ABE411E2291F4E4300DA7439 /* Products */,
 				6AD3573C4E60323C8B16A150 /* Pods */,
@@ -183,13 +185,11 @@
 		ABE411E3291F4E4300DA7439 /* BaseMVVM */ = {
 			isa = PBXGroup;
 			children = (
-				ABAA5777292026E50008F771 /* .swiftlint.yml */,
 				ABE411E4291F4E4300DA7439 /* AppDelegate.swift */,
 				ABE411E6291F4E4300DA7439 /* SceneDelegate.swift */,
 				ABAA576B291F61180008F771 /* Configurations */,
 				ABAA5769291F60D80008F771 /* Screens */,
 				ABAA576C291F61930008F771 /* Mics */,
-				ABE411E8291F4E4300DA7439 /* ViewController.swift */,
 				ABE411EA291F4E4300DA7439 /* Main.storyboard */,
 				ABE411EF291F4E4700DA7439 /* LaunchScreen.storyboard */,
 			);
@@ -451,7 +451,7 @@
 			baseConfigurationReference = 86F09AC9F28C9C8EEF164D5E /* Pods-BaseMVVM.debug staging.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconStag;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Manual;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -537,7 +537,7 @@
 			baseConfigurationReference = 3806E5B0A257D1BE87E806B0 /* Pods-BaseMVVM.release staging.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconStag;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
@@ -864,7 +864,7 @@
 			baseConfigurationReference = F091DBDC3A8913A6BFF5E212 /* Pods-BaseMVVM.debug development.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconDev;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Manual;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -894,11 +894,11 @@
 			baseConfigurationReference = 5F63EB79F3BEB8CB9CA82F9B /* Pods-BaseMVVM.release development.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconDev;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6YDNUZLKWC;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/BaseMVVM/Mics/Resource/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Dev App";
