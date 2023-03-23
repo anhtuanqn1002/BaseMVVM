@@ -9,6 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var viewModel = SampleViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

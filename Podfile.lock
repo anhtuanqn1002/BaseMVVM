@@ -1,16 +1,45 @@
 PODS:
+  - Alamofire (5.6.4)
+  - Moya (15.0.0):
+    - Moya/Core (= 15.0.0)
+  - Moya/Combine (15.0.0):
+    - Moya/Core
+  - Moya/Core (15.0.0):
+    - Alamofire (~> 5.0)
+  - ObjcExceptionBridging (1.0.1):
+    - ObjcExceptionBridging/ObjcExceptionBridging (= 1.0.1)
+  - ObjcExceptionBridging/ObjcExceptionBridging (1.0.1)
   - SwiftGen (6.6.2)
+  - SwiftLint (0.50.3)
+  - XCGLogger (7.0.1):
+    - XCGLogger/Core (= 7.0.1)
+  - XCGLogger/Core (7.0.1):
+    - ObjcExceptionBridging
 
 DEPENDENCIES:
+  - Moya (~> 15.0)
+  - Moya/Combine (~> 15.0)
   - SwiftGen (~> 6.0)
+  - SwiftLint
+  - XCGLogger (~> 7.0.1)
 
 SPEC REPOS:
   trunk:
+    - Alamofire
+    - Moya
+    - ObjcExceptionBridging
     - SwiftGen
+    - SwiftLint
+    - XCGLogger
 
 SPEC CHECKSUMS:
+  Alamofire: 4e95d97098eacb88856099c4fc79b526a299e48c
+  Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
+  ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
   SwiftGen: 1366a7f71aeef49954ca5a63ba4bef6b0f24138c
+  SwiftLint: 77f7cb2b9bb81ab4a12fcc86448ba3f11afa50c6
+  XCGLogger: 1943831ef907df55108b0b18657953f868de973b
 
-PODFILE CHECKSUM: 37f85a51ac9ee1151fb5cb2d699c59b8fd60f815
+PODFILE CHECKSUM: db0ebfce972b79150f280d2eae6e3decf14edf76
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.12.0
