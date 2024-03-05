@@ -10,12 +10,6 @@ import XCTest
 import Moya
 
 final class SampleTests: XCTestCase {
-
-    struct SampleObject: Codable {
-        var name = "hihi"
-        var value = 100
-    }
-    
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
@@ -30,24 +24,39 @@ final class SampleTests: XCTestCase {
         // Any test you write for XCTest can be annotated as throws and async.
         // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
         // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-        var sample = SampleObject()
-        sample.name = "heeloooooooooo1"
-        let data = try JSONEncoder().encode(sample)
+        let jsonString = """
+{
+        "status": {
+          "verified": null,
+          "sentCount": 0
+        },
+        "_id": "64071438201e5eeeda86acdf",
+        "user": "63fdd47e697b12a2af3d3234",
+        "text": "Qwe123.",
+        "type": "cat",
+        "deleted": false,
+        "createdAt": "2023-03-07T10:38:48.370Z",
+        "updatedAt": "2023-03-07T10:38:48.370Z",
+        "__v": 0
+}
+"""
+        let data = try JSONEncoder().encode(jsonString)
 
-        let customEndpointClosure = { (target: Sample) -> Endpoint in
+        let customEndpointClosure = { (target: CatFacts) -> Endpoint in
             return Endpoint(url: URL(target: target).absoluteString,
-                            sampleResponseClosure: { .networkResponse(200, data) },
+                            sampleResponseClosure: { .networkResponse(100, data) },
                             method: target.method,
                             task: target.task,
                             httpHeaderFields: target.headers)
         }
 //        let provider = MoyaProvider<Sample>(endpointClosure: customEndpointClosure, stubClosure: MoyaProvider.immediatelyStub)
-        let provider = MoyaProvider<Sample>()
-        let api = SampleAPI(provider: provider)
-        let viewModel = SampleViewModel(network: api)
+        let provider = MoyaProvider<CatFacts>()
+        let api = CatFactsAPI(provider: provider)
+        let viewModel = CatFactsViewModel(network: api)
         let expectation = expectation(description: "wait wait wait")
         viewModel.getFacts()
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            XCTAssertEqual(viewModel.user, "63fdd47e697b12a2af3d3234")
             expectation.fulfill()
         }
         waitForExpectations(timeout: 3)

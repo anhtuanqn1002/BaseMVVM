@@ -5,24 +5,27 @@
 //  Created by Tuan Nguyen on 13/03/2023.
 //
 
-import Foundation
+import Combine
 import Moya
 
-enum Sample {
+enum CatFacts {
     case facts
 }
 
-extension Sample: TargetType {
+extension CatFacts: TargetType {
     var baseURL: URL {
-        return URL(string: Constant.API.baseURLString)!
+        guard let url = URL(string: Constant.API.baseURLString) else {
+            fatalError("Invalid base URL string: \(Constant.API.baseURLString)")
+        }
+        return url
     }
     
     var path: String {
         switch self {
         case .facts:
             return "/facts/random"
-        default:
-            return ""
+//        default:
+//            return ""
         }
     }
     
@@ -34,8 +37,8 @@ extension Sample: TargetType {
         switch self {
         case .facts:
             return .requestParameters(parameters: [:], encoding: URLEncoding.default)
-        default:
-            return .requestPlain
+//        default:
+//            return .requestPlain
         }
     }
     
@@ -44,24 +47,18 @@ extension Sample: TargetType {
     }
 }
 
-class SampleAPI {
-    var provider = MoyaProvider<Sample>()
-    
-    init(provider: MoyaProvider<Sample> = MoyaProvider<Sample>()) {
+class CatFactsAPI {
+    var provider = MoyaProvider<CatFacts>()
+    var cancellables = Set<AnyCancellable>()
+
+    init(provider: MoyaProvider<CatFacts> = MoyaProvider<CatFacts>()) {
         self.provider = provider
     }
     
-    func getFacts() {
-        provider.request(.facts, callbackQueue: .main) { progress in
-            log?.debug("Moya progress \(progress)")
-        } completion: { result in
-            switch result {
-            case .failure(let error):
-                log?.debug("===> error \(error)")
-            case .success(let response):
-                let json = String(data: response.data, encoding: .utf8)
-                log?.debug("===> status code = \(response.statusCode) - json: \(json)")
-            }
-        }
+    func getFacts() -> AnyPublisher<CatData, Error> {
+        return provider.requestPublisher(.facts, callbackQueue: .main)
+            .map(\.data)
+            .decode(type: CatData.self, decoder: JSONDecoder())
+            .eraseToAnyPublisher()
     }
 }

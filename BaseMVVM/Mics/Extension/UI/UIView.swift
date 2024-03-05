@@ -206,6 +206,7 @@ extension UIView {
         }
     }
     
+    // swiftlint:disable identifier_name
     /// SwifterSwift: x origin of view.
     var x: CGFloat {
         get {
@@ -216,6 +217,7 @@ extension UIView {
         }
     }
     
+    // swiftlint:disable identifier_name
     /// SwifterSwift: y origin of view.
     var y: CGFloat {
         get {

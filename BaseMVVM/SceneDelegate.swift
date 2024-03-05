@@ -15,7 +15,27 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        
+        // Ensure the scene is of type UIWindowScene
+        guard let windowScene = scene as? UIWindowScene else { return }
+        
+        // Create a new UIWindow using the windowScene constructor
+        let window = UIWindow(windowScene: windowScene)
+        
+        // Set up your CatFactsViewController
+        let catFactsViewController = CatFactsViewController()
+        
+        // Set the CatFactsViewController as the rootViewController
+        window.rootViewController = catFactsViewController
+        
+        // Set the window's background color (optional)
+        window.backgroundColor = .white
+        
+        // Set the Scene's window property
+        self.window = window
+        
+        // Make the window visible
+        window.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
